@@ -7,7 +7,7 @@ codec_name = 'my_infix_codec'
 
 def translate(readline):
     for type, name,_,_,_ in tokenize.generate_tokens(readline):
-        if type ==tokenize.NAME and name == op_name:
+        if type == tokenize.NAME and name == op_name:
             yield tokenize.OP, op_subst
         else:
             yield type, name
